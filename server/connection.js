@@ -4,7 +4,7 @@ const { promisify } = require('util');
 // Configurar la conexión a la base de datos
 const connection = mysql.createPool({
    host: 'localhost',
-   user: 'ag',
+   user: 'diego',
    password: 'Uykw041o',
    database: 'biblioteca_db'
 });
@@ -26,6 +26,7 @@ connection.getConnection(
    (err, conn) => {
       if(err) {
          console.log('Problema para conectar a la DB');
+         console.log(err);
       }
       if(conn) {
          console.log('¡DB conectada!');
