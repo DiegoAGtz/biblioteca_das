@@ -16,4 +16,18 @@ router.get('/todos_los_libros', async(req, res) => {
    }
 });
 
+router.post('/eliminar_libro', async(req, res) => {
+   // Vamos a eliminar un libro, por lo tanto necesitamos POST
+   try {
+      const body = req.body;
+      const query = `DELETE FROM libro WHERE lib_id = ${body.lib_id};`;
+      await connection.query(query);
+      res.json('ok');
+   } catch(error) {
+      return res.json({
+         error: error
+      });
+   }
+});
+
 module.exports = router;
