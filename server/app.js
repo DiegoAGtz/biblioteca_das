@@ -6,12 +6,15 @@ const path = require('path');
 const history = require('connect-history-api-fallback');
 
 app.use(cors());
-app.use(express.json());
-app.use(express.urlencoded({extended: true}));
-app.use('/libro', require('./routes/libro'));
 app.use(morgan('tiny'));
 app.use(history());
+app.use(express.json());
+app.use(express.urlencoded({extended: true}));
 app.use(express.static(path.join(__dirname, 'public')));
+
+// Esto debe ir al final
+app.use('/libro', require('./routes/libro'));
+app.use('/usuario', require('./routes/usuario'));
 
 // API REST --> HTTP -> Web
 // GET, POST -->  Enviar y recuperar información
