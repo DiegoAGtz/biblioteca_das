@@ -8,6 +8,13 @@
     </v-app-bar>
 
     <v-main>
+      <v-row class="my-5">
+        <v-spacer></v-spacer>
+        <router-link :to="{name: 'Home'}" class="mr-5">Libros</router-link>
+        <router-link :to="{name: 'Usuarios'}" class="mr-5">Usuarios</router-link>
+        <router-link :to="{name: 'Prestamos'}">Préstamos</router-link>
+        <v-spacer></v-spacer>
+      </v-row>
       <router-view/>
     </v-main>
   </v-app>

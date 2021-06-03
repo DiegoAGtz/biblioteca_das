@@ -30,7 +30,7 @@ router.post('/eliminar_usuario', async(req, res) => {
    }
 });
 
-router.post('/nuevo_usu', async(req, res) => {
+router.post('/nuevo_usuario', async(req, res) => {
    // Vamos a insertar un libro, por lo tanto necesitamos POST
    try {
       const body = req.body;

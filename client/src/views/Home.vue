@@ -71,8 +71,7 @@ export default {
         { text: 'Edicion', value: 'lib_edicion' },
         { text: 'Acciones', value: 'actions' }
       ],
-      libros: [
-      ],
+      libros: [],
       nl_dialog: false,
       nuevo_libro: {
         // lib_titulo: '',
