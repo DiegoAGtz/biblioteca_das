@@ -39,6 +39,7 @@ router.post('/nuevo_prestamo', async(req, res) => {
    // Vamos a insertar un prestamo, por lo tanto necesitamos POST
    try {
       const body = req.body;
+      console.log(body);
       const query = 'INSERT INTO prestamo(pre_id_usu, pre_fecha_prestamo, pre_fecha_entrega) VALUES (?, ?, ?);';
       const result = await connection.query(query, [body.pre_id_usu, body.pre_fecha_prestamo, body.pre_fecha_entrega]);
       res.json('ok');
